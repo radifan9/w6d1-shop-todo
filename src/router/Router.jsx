@@ -1,9 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
+
+// Layout
+import { Layout } from "../layout/Layout.jsx";
+
+// Pages
 import { Home } from "../pages/Home.jsx";
 import { ShoppingApp } from "../pages/ShoppingApp.jsx";
 import { Todo } from "../pages/Todo.jsx";
-import { Layout } from "../layout/Layout.jsx";
+import SmokerSurvey from "../pages/SmokerSurvey.jsx";
 
 export const Router = () => {
   return (
@@ -13,6 +18,7 @@ export const Router = () => {
           <Route index element={<Home />} />
           <Route path="shop" element={<ShoppingApp />} />
           <Route path="todo" element={<Todo />} />
+          <Route path="smoker" element={<SmokerSurvey />} />
         </Route>
         <Route />
       </Routes>
