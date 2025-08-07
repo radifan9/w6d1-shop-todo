@@ -28,6 +28,9 @@ export const Header = () => {
           <li>
             <Link to="/todo">Todo</Link>
           </li>
+          <li>
+            <Link to="/smoker">Smoker Survey</Link>
+          </li>
         </ul>
       </nav>
       {authData.isLoggedIn ? (
