@@ -7,8 +7,8 @@ import { Layout } from "../layout/Layout.jsx";
 // Pages
 import { Home } from "../pages/Home.jsx";
 import { ShoppingApp } from "../pages/ShoppingApp.jsx";
-import { Todo } from "../pages/Todo.jsx";
 import SmokerSurvey from "../pages/SmokerSurvey.jsx";
+import TodoList from "../pages/TodoList.jsx";
 
 export const Router = () => {
   return (
@@ -17,7 +17,7 @@ export const Router = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="shop" element={<ShoppingApp />} />
-          <Route path="todo" element={<Todo />} />
+          <Route path="todo" element={<TodoList />} />
           <Route path="smoker" element={<SmokerSurvey />} />
         </Route>
         <Route />

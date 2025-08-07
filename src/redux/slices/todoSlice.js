@@ -29,6 +29,16 @@ const todoSlice = createSlice({
       }
     },
 
+    // edit task
+    editTask: (state, { payload }) => {
+      console.log(`oldTitle : ${payload.oldTitle}`);
+      console.log(`newTitle : ${payload.newTitle}`);
+
+      // find data of an old title
+      const data = state.todo.find((el) => el.title === payload.oldTitle);
+      Object.assign(data, { title: payload.newTitle });
+    },
+
     // remove task
     removeTask: (state, { payload }) => {
       const index = state.todo.findIndex((el) => {
@@ -41,7 +51,7 @@ const todoSlice = createSlice({
 });
 
 // Export action
-export const { addTask, toggleTask, removeTask } = todoSlice.actions;
+export const { addTask, toggleTask, editTask, removeTask } = todoSlice.actions;
 
 // Export reducer
 export default todoSlice.reducer;
